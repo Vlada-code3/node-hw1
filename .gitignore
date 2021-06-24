@@ -1,4 +1,4 @@
 
 node_modules/.bin/is-ci
 node_modules/.bin/nodemon
-node_modules
+node_modules/*
