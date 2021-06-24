@@ -27,7 +27,7 @@ function removeContact(contactId) {
     if (err) {
       console.log(err.message);
     }
-    const deleteContactsList = JSON.parse(data).filter(contact => contact.id === Number(contactId));
+    const deleteContactsList = JSON.parse(data).filter(contact => contact.id !== Number(contactId));
 
     fs.writeFile(contactsPath, JSON.stringify(deleteContactsList), err => {
       if (err) {
